@@ -1,0 +1,112 @@
+
+.navy{
+  width: 100vw;
+}
+
+
+.dNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+
+}
+
+.logo {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.8),
+    0 0 20px rgba(74, 222, 128, 0.5),
+    0 0 40px rgba(74, 222, 128, 0.3);
+}
+
+.logo:active {
+  transform: scale(0.95);
+}
+
+.navItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem li {
+  list-style: none;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+
+.navItem li:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-color: var(--primary-color);
+  text-decoration-thickness: 2px;
+}
+
+/* active class for persistent highlight */
+.navItem li.active {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-color: var(--primary-color);
+  text-decoration-thickness: 2px;
+}
+
+@media (min-width: 768px) {
+  .dNavbar {
+    justify-content: space-between;
+  }
+
+  .navItem{
+    gap: 20px;
+  }
+
+  .navItem li{
+    font-size: 18px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .logo {
+    font-size: 12px;
+  }
+  .navItem li{
+    font-size: 10px;
+  }
+  .navItem{
+    gap: 8px;
+  }
+  .dNavbar{
+    justify-content: start;
+    gap: 40px;
+  }
+}
+
+
+@media (min-width : 1080px) {
+  .dNavbar{
+    padding: 20px 200px;
+  }
+}

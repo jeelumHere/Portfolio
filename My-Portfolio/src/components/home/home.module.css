@@ -1,0 +1,61 @@
+.container{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 200px;
+    height:100vh;    /* just for now remove it later*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.name{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 35px;
+}
+.colorIt{
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+.intro{
+    font-weight: 400;
+}
+.para{
+    margin-top: 20px;
+}
+
+.mediaIcon{
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    padding: 5px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 41px -21px var(--primary-color);
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.mediaIcon:hover{
+    box-shadow: inset 0px 0px 20px 0px var(--primary-color);
+    transform: scale(1.2);
+}
+.mediaIcon:active{
+    box-shadow: inset 0px 0px 20px 0px var(--primary-color);
+    transform: scale(1.2);
+}
+
+.socialMedia{
+    display: flex;
+    gap: 20px;
+}
+
+/* responsive ness for the container padding alighnment */
+@media (max-width: 768px) {
+    .container{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+}
