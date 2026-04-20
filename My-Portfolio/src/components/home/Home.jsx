@@ -1,5 +1,5 @@
 import style from '../home/home.module.css'
-
+import myImage from './avatar/SHARJEEL2.jpg'
 import React from 'react'
 
 const Home = () => {
@@ -43,9 +43,9 @@ const Home = () => {
     }]
 
     return (
-        <div className={style.container}>
+        <div className={style.container} id="home">
 
-
+            {/* Left side starts here */}
             <div>
 
 
@@ -76,6 +76,16 @@ const Home = () => {
 
 
             </div>
+            {/* Left side ends here */}
+
+
+            {/* Right side starts here */}
+            <div className={style.wrapper}>
+                <div className={style.avatar}>
+                    <img src={myImage} alt="my avatar" />
+                </div>
+            </div>
+            {/* Right side ends here */}
 
 
         </div>
