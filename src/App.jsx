@@ -8,7 +8,7 @@ const App = () => {
       <Navbar/>
 
 
-       <Home style={{height:"100vh"}} /* home content *//>
+       <Home style={{height:"100vh"}} id="home"/* home content *//>
 
       <section style={{height:'100vh'}} id="about">
         {/* about content */} i am about section
