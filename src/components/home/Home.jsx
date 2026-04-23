@@ -46,7 +46,7 @@ const Home = () => {
         <div className={style.container} id="home">
 
             {/* Left side starts here */}
-            <div>
+            <div className={style.left}>
 
 
                 <div className={style.colorIt}>Hi , Myself</div>
