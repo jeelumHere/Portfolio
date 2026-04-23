@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+}
+
+.title {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 80%;        /* controls how wide the text area is */
+}
+
+.title svg {
+    width: 100%;
+    height: 120px;     /* increase this to make text bigger */
+}
+
+
+/* Animation */
+svg text {
+    font-size: 60px;   /*  change this  place only */
+    fill: transparent;
+    font-weight: bolder;
+    stroke: var(--primary-color);
+    stroke-width: 0.1;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: textAnimation 3s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+    svg text  {
+        font-size: 40px; /* tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    svg text  {
+        font-size: 24px; /* mobile */
+    }
+}
+@media (max-width: 400px) {
+    svg text  {
+        font-size: 16px; /*small mobile */
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        stroke-dashoffset: 120;
+    }
+    60% {
+        fill: transparent;
+    }
+    100% {
+        fill: var(--primary-color);
+        stroke-dashoffset: 0;
+    }
+}
+.banner{
+    animation-name: wellcome;
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes wellcome{
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
