@@ -2,6 +2,10 @@ import React from 'react'
 import Navbar from './components/navbar/Navbar'
 import Home from './components/home/Home'
 import Welcome from './components/wellcome/Welcome'
+import Skill from './components/skill/Skill'
+import About from './components/about/About'
+import Project from './components/project/Project'
+import Contact from './components/contact/Contact'
 
 const App = () => {
   return (
@@ -10,22 +14,25 @@ const App = () => {
       <Navbar/>
 
 
-       <Home style={{height:"100vh"}} id="home"/* home content *//>
+       <section>
+        <Home/>
+       </section>
 
-      <section style={{height:'100vh'}} id="about">
-        {/* about content */} i am about section
+      <section>
+        <Skill/>
       </section>
 
-      <section style={{height:'100vh'}} id="skills">
-        {/* skills content */} i am skill section
+      <section>
+        <About/>
       </section>
 
-      <section style={{height:'100vh'}} id="projects">
-        {/* projects content */} i am project section
+
+      <section>
+        <Project/>
       </section>
 
-      <section style={{height:'100vh'}} id="contact">
-        {/* contact content */} i am contact section
+      <section >
+        <Contact/>
       </section>
 
 
